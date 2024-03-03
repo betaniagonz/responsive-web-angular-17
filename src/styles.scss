@@ -7,15 +7,44 @@ $primary: mat.define-palette(mat.$indigo-palette, 500);
 $accent: mat.define-palette(mat.$pink-palette, A200);
 $warn: mat.define-palette(mat.$red-palette);
 
-$theme: mat.define-dark-theme((
-  color: (
-    primary: $primary,
-    accent: $accent,
-    warn: $warn
+$theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+      warn: $warn,
+    ),
   )
-));
+);
 
 @include mat.all-component-themes($theme);
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; color: white; background-color: #1d1d1d; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  color: white;
+  background-color: #1d1d1d;
+}
+
+.mat-body,
+.mat-body-2,
+.mat-typography .mat-body,
+.mat-typography .mat-body-2,
+.mat-typography {
+  font: 400 14px / 20px Nunito, sans-serif;
+  letter-spacing: 0.0178571429em;
+}
+
+.mat-h1,
+.mat-headline-5,
+.mat-typography .mat-h1,
+.mat-typography .mat-headline-5,
+.mat-typography h1 {
+  font: 400 24px / 32px Nunito, sans-serif;
+  letter-spacing: normal;
+  margin: 0 0 16px;
+}
